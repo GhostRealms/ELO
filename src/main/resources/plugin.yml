@@ -1,0 +1,3 @@
+name: GR-PVP ELO
+version: PRE
+main: net.ghostrealms.elo.PVPELO
