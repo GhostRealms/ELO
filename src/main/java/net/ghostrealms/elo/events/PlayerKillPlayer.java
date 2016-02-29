@@ -12,7 +12,7 @@ import org.bukkit.event.entity.EntityDamageByEntityEvent;
 public class PlayerKillPlayer implements Listener {
 
     @EventHandler
-    public void PlayerKillEvent(EntityDamageByEntityEvent e) {
+    public void PlayerKillPlayer(EntityDamageByEntityEvent e) {
         if (e.getDamager() instanceof Player) {
             Player Killer = (Player) e.getDamager();
             if (e.getEntityType() == EntityType.PLAYER) {
