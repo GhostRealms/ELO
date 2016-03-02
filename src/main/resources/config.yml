@@ -1,6 +1,15 @@
 database:
-  name:
-  host:
-  user:
-  pass:
-  port:
+  name: 'factions'
+  host: 'localhost'
+  user: 'root'
+  pass: 'password'
+  port: 3306
+weighting:
+  power: 1
+  kdr: 1000
+  kills: 2
+  deaths: -1
+  daily-login: 25
+  login-streak: 4
+  damage-inflicted: 0
+  damage-recieved: 0
