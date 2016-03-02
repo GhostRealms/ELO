@@ -14,7 +14,15 @@ public class PVPELO extends JavaPlugin {
   
   @Override
   public void onEnable() {
+
     this.establishSQL();
+
+    //Event registry
+    this.getServer().getPluginManager().registerEvents(new PlayerKillPlayer(), this);
+    this.getServer().getPluginManager().registerEvents(new PlayerJoin(), this);
+    this.getServer().getPluginManager().registerEvents(new PlayerLeave(), this);
+    //Command registry
+
   }
   
   @Override
@@ -32,23 +40,6 @@ public class PVPELO extends JavaPlugin {
     database = new Database(name, host, user, pass, port);
     database.connect();
   }
-
-    @Override
-    public void onEnable() {
-        //Event registry
-        this.getServer().getPluginManager().registerEvents(new PlayerKillPlayer(), this);
-        this.getServer().getPluginManager().registerEvents(new PlayerJoin(), this);
-        this.getServer().getPluginManager().registerEvents(new PlayerLeave(), this);
-        //Command registry
-    }
-
-    @Override
-    public void onDisable() {
-
-    }
-
-    private void setupDB(String host, String user, String pass, int port) {
-
-    }
+  
 
 }
